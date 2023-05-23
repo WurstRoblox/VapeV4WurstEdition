@@ -1,10 +1,5 @@
 repeat task.wait() until game:IsLoaded()
 local queueonteleport = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport or function() end
-game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
-    if State == Enum.TeleportState.Started then
-        queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/WurstRoblox/VapeV4WurstEdition/main/mainscript.lua'))()")
-    end
-end)
 local GuiLibrary
 local baseDirectory = (shared.VapePrivate and "vapeprivate/" or "vape/")
 local vapeInjected = true
